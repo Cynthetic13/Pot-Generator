@@ -38,16 +38,40 @@ Requires:
 Optional:
 If Building Shaders: `sdl3_shadercross`
 
-### Arch Based Distros
-**Required:** `sudo pacman -S --needed base-devel cmake sdl3`
+### Libs for Arch Based Distros
+**Required:**
+```
+sudo pacman -Syu
+sudo pacman -S --needed base-devel cmake sdl3
+```
 
-**Optional:** `yay -S sdl3_shadercross-git`
+**Optional:**
+```
+yay -S sdl3_shadercross-git
+```
 
-### Debian Based Distros
-**Required:** `sudo apt install build-essential cmake libsdl3-dev`
+### Libs for Debian Based Distros
+**Required:**
+```
+sudo apt update
+sudo apt install build-essential cmake libsdl3-dev
+```
 
 **Optional:** Build with CMake [SDL_shadercross Github](github.com/libsdl-org/SDL_shadercross)
 > [!NOTE]
 > This has only been tested on Arch Linux
+
+
+**Get Source Code:**
+```
+git clone https://github.com/Cynthetic13/Pot-Generator.git
+cd Pot-Generator
+```
+
+**Building:**
+```
+cmake .
+````
+
 ## Windows
 TODO...
