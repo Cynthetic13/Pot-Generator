@@ -1,4 +1,4 @@
-# Pot-Generator
+# Flower Pot Generator
 This is a proof of concept for dynamically generating a 3D flower pot for 3D printing.
 
 ## How it works
@@ -27,7 +27,7 @@ After clicking export, this will generate a '.obj' file as a plain text model to
 - [ ] Circle Bottom
 
 ## The future
-As this is a proof of concept with the language I'm most familiar with, I plan on porting this to Javascript using Three.js to allow imbedding into a website
+This is only a proof of concept in C++, i will either port this to Javascript using Three.js, or compile it to WebAssembly as a library for Javascript/Node.js
 
 # Building
 ## Linux
@@ -38,7 +38,7 @@ Requires:
 Optional:
 If Building Shaders: `sdl3_shadercross`
 
-### Libs for Arch Based Distros
+### Arch
 **Required:**
 ```
 sudo pacman -Syu
@@ -50,7 +50,7 @@ sudo pacman -S --needed base-devel cmake sdl3
 yay -S sdl3_shadercross-git
 ```
 
-### Libs for Debian Based Distros
+### Ubuntu/Debian
 **Required:**
 ```
 sudo apt update
