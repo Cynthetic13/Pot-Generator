@@ -1,3 +1,15 @@
+# CLion Project Files
+.idea/
+cmake-build-*/
+*.iml
+
+# CMake Files
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+instalL_manifest.txt
+
 # Prerequisites
 *.d
 
