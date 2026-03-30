@@ -1,5 +1,5 @@
 # Pot-Generator
-This is a proof of concept for dynamically generating a 3D pot for 3D printing.
+This is a proof of concept for dynamically generating a 3D flower pot for 3D printing.
 
 ## How it works
 Using the on-screen controls, you can decide the size of a pot, and the different points where the width of the pot changes.
