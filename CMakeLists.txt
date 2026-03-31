@@ -12,6 +12,10 @@ if(UNIX)
     find_package(SDL3 REQUIRED)
 endif(UNIX)
 
-add_executable(Pot_Generator main.cpp)
+add_executable(Pot_Generator
+        src/BackendSDL.cpp
+        main.cpp)
+
+target_include_directories(Pot_Generator PRIVATE src)
 
 target_link_libraries(Pot_Generator PRIVATE SDL3::SDL3)
