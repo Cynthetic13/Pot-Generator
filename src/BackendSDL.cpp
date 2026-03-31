@@ -205,7 +205,10 @@ int BackendSDL::AppUpdate() {
   SDL_BindGPUVertexBuffers(renderPass, 0, bufferBindings, 1);
 
   // Issue Draw Call
-  SDL_DrawGPUPrimitives(renderPass, 3, 1, 0, 0);
+  int vertexCount = meshData.size();
+  int triangleCount = vertexCount -2;
+
+  SDL_DrawGPUPrimitives(renderPass, triangleCount * 3, 1, 0, 0);
 
   // End Render Pass
   SDL_EndGPURenderPass(renderPass);
@@ -237,8 +240,8 @@ int BackendSDL::AppQuit() {
  return 0;
 }
 
-int BackendSDL::SubmitMesh(Vertex vertexData[], const size_t size) {
- meshDataSize = size * sizeof(Vertex);
- meshData.assign(vertexData, vertexData + size);
+int BackendSDL::SubmitMesh(std::vector<Vertex>& vertexData) {
+ meshData = vertexData;
+ meshDataSize = meshData.size() * sizeof(Vertex);
  return 0;
 }

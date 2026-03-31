@@ -2,6 +2,7 @@
 #define POT_GENERATOR_BACKEND_H
 
 #include <iostream>
+#include <vector>
 
 class IBackend {
 public:
@@ -13,7 +14,7 @@ public:
     virtual int AppInit(uint32_t WINDOW_WIDTH, uint32_t WINDOW_HEIGHT) = 0;
     virtual int AppUpdate() = 0;
     virtual int AppQuit() = 0;
-    virtual int SubmitMesh(Vertex vertexData[], size_t size) = 0;
+    virtual int SubmitMesh(std::vector<Vertex>& vertexData) = 0;
 };
 
 #endif //POT_GENERATOR_BACKEND_H
