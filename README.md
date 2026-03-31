@@ -6,7 +6,7 @@ Using the on-screen controls, you can decide the size of a pot, and the differen
 
 This will dynamically generate a pot using these values for 3D printing, which is displayed on the right hand side of the screen.
 
-After clicking export, this will generate a '.obj' file as a plain text model to be used with 3D software, and an '.stl' file to be used for 3D printing.
+After clicking export, this will generate a '.obj' fTodoile as a plain text model to be used with 3D software, and an '.stl' file to be used for 3D printing.
 
 ## Tech Specs
 - C++ 26
@@ -15,6 +15,7 @@ After clicking export, this will generate a '.obj' file as a plain text model to
 ## Task List
 - [x] SDL3 Setup
 - [ ] Render Base Pot
+- [ ] Implement dearimgui
 - [ ] Allow Adjusting the Pot in Realtime
 - [ ] Export Function to .obj
 - [ ] Export Function to .stl
@@ -25,6 +26,15 @@ After clicking export, this will generate a '.obj' file as a plain text model to
 - [ ] Rounded Top
 - [ ] Cube Shape
 - [ ] Circle Bottom
+- [ ] Preset Shapes (Herringbone Pattern, Triangulated Pattern, Weave Pattern, etc)
+- [ ] Texture loading (generate a heightmap from a texture to use on the surface of the mesh)
+
+## Under Consideration
+- [ ] Procedural Texture Generation (more advanced feature for creative indviduals, and allows more flexibility, but might be hard to properly stress test)
+- [ ] Built-in stress testing to match the 3D printing overhand specs (generates a heatmap that will show the user where the hardest parts of the print will be, red will make it not usable)
+- [ ] Proper layering to represent the final product (concrete layers more than plastic 3D printing)
+- [ ] Albedo and Normal Texture Maps to allow the user to see something similar to what the final product will look like (UV unwrapping it might be the complex part)
+- [ ] Cube Maps or something similar to give a person an idea of what it might look like in different environments (requires PBR shader and properly sourced PBR texture maps)
 
 ## The future
 This is only a proof of concept in C++, i will either port this to Javascript using Three.js, or compile it to WebAssembly as a library for Javascript/Node.js
