@@ -10,13 +10,15 @@ void InitializeAssetLoader() {
 SDL_GPUShader* LoadShader(SDL_GPUDevice* device, const char* shaderFilename, Uint32 samplerCount,
                         Uint32 uniformBufferCount, Uint32 storageBufferCount, Uint32 storageTextureCount);
 
-float cubeVertices[] = {
-    -0.5f, -0.5f, 0.5f,
-    0.5f, -0.5f, 0.5f,
-    0.5f, 0.5f, 0.5f,
-    0.5f, 0.5f, 0.5f,
-    -0.5f, 0.5f, 0.5f,
-    -0.5f, -0.5f, 0.5f
+struct Vertex {
+    float x, y, z;      // vec3 position
+    float r, g, b, a;   // vec4 color
+};
+
+static Vertex vertices[] {
+    {0.0f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f },
+    { -0.5f, -0.5f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f },
+    {0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f }
 };
 
 int main() {
