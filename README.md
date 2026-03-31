@@ -6,7 +6,7 @@ Using the on-screen controls, you can decide the size of a pot, and the differen
 
 This will dynamically generate a pot using these values for 3D printing, which is displayed on the right hand side of the screen.
 
-After clicking export, this will generate a '.obj' fTodoile as a plain text model to be used with 3D software, and an '.stl' file to be used for 3D printing.
+After clicking export, this will generate a '.obj' file as a plain text model to be used with 3D software, and an '.stl' file to be used for 3D printing.
 
 ## Tech Specs
 - C++ 26
@@ -20,6 +20,7 @@ After clicking export, this will generate a '.obj' fTodoile as a plain text mode
 - [ ] Export Function to .obj
 - [ ] Export Function to .stl
 - [ ] Support custom shapes
+- [ ] WebGL or similar for rendering backend (SDL3 currently doesn't support Web)
 
 ## Custom Shapes
 - [ ] Flat Top
@@ -35,6 +36,7 @@ After clicking export, this will generate a '.obj' fTodoile as a plain text mode
 - [ ] Proper layering to represent the final product (concrete layers more than plastic 3D printing)
 - [ ] Albedo and Normal Texture Maps to allow the user to see something similar to what the final product will look like (UV unwrapping it might be the complex part)
 - [ ] Cube Maps or something similar to give a person an idea of what it might look like in different environments (requires PBR shader and properly sourced PBR texture maps)
+- [ ] Multi-threading (I don't think this is needed since it's a single object, but it might be nice to offload either rendering or generation onto another thread, or multi-threaded)
 
 ## The future
 This is only a proof of concept in C++, i will either port this to Javascript using Three.js, or compile it to WebAssembly as a library for Javascript/Node.js
