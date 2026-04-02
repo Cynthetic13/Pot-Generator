@@ -31,8 +31,8 @@ After clicking export, this will generate a '.obj' file as a plain text model to
 - [ ] Texture loading (generate a heightmap from a texture to use on the surface of the mesh)
 
 ## Under Consideration
-- [ ] Procedural Texture Generation (more advanced feature for creative indviduals, and allows more flexibility, but might be hard to properly stress test)
-- [ ] Built-in stress testing to match the 3D printing overhand specs (generates a heatmap that will show the user where the hardest parts of the print will be, red will make it not usable)
+- [ ] Procedural Texture Generation (more advanced feature for creative individuals, and allows more flexibility, but might be hard to properly stress test)
+- [ ] Built-in stress testing to match the 3D printing overhang specs (generates a heatmap that will show the user where the hardest parts of the print will be, red will make it not usable)
 - [ ] Proper layering to represent the final product (concrete layers more than plastic 3D printing)
 - [ ] Albedo and Normal Texture Maps to allow the user to see something similar to what the final product will look like (UV unwrapping it might be the complex part)
 - [ ] Cube Maps or something similar to give a person an idea of what it might look like in different environments (requires PBR shader and properly sourced PBR texture maps)
